@@ -10,18 +10,28 @@
   padding: 20px ($grid-gutter-width / 2) 10px;
 }
 
-.basement-container {
+.basement-container,
+.basementLp-container {
   @include make-container;
   padding: 10px 25px;
 }
 
 .basement-copyright {
-  color: $gray-base;
   text-align: center;
 }
 
+.basement-copyright,
+.basementLp-copyright {
+  color: $gray-base;
+  margin-top: 5px;
+}
+
+.basement-copyright-wrapper {
+  @include make-sm-column(3);
+}
+
 .basement-currency,
-.region-select {
+.basement-region-select {
   @include make-sm-column(6);
   text-align: center;
 }
@@ -43,12 +53,6 @@
 .basement-currency-text {
   color: $white;
   text-transform: uppercase;
-}
-
-.basementLp-copyright {
-  color: $gray-light;
-  margin-top: 5px;
-  text-align: right;
 }
 
 .basement-flag-icon {
@@ -116,11 +120,43 @@
 
 @include basement-flag(venezuela, 0, -340px);
 
-.basement-region-select {
-  font-size: 1.2rem;
+
+.basement-region-select-wrapper {
+  @include make-sm-column(9);
 }
 
-.basement-iconList {
+.basement-region-select,
+.basementLp-region-select {
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
+.basementLp-copyright {
+  text-align: right;
+}
+
+.basement-region-select-text,
+.basementLp-region-select-text {
+  color: $white;
+  text-transform: uppercase;
+}
+
+.basementLp-iconList-wrapper {
+  @include make-sm-column(4);
+}
+
+.basementLp-copyright-wrapper {
+  @include make-xs-column(6);
+  @include make-sm-column(4);
+}
+
+.basementLp-region-select-wrapper {
+  @include make-xs-column(6);
+  @include make-sm-column(4);
+}
+
+.basement-iconList,
+.basementLp-iconList {
   list-style: none;
   margin-left: -5px;
   padding-left: 0;
@@ -158,4 +194,9 @@
   .region-select {
     text-align: left;
   }
-}
+
+  .basementLp-region-select {
+    text-align: center;
+  }
+
+ }
